@@ -17,7 +17,7 @@ class CheckAdmin
     public function handle(Request $request, Closure $next)
     {
         $username = $request->session()->get('username');
-        $users = DB::table('users')
+        $users = DB::table('accounts')
                 ->where('username', '=', $username)
                 ->first();
                 if($users->admin==1)

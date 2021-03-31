@@ -14,7 +14,7 @@ class PostController extends Controller
     {
         $username = $request->input('username0123');
         $password = $request->input('password0123');
-        $users = DB::table('users')
+        $users = DB::table('accounts')
             ->where('username', '=', $username)
             ->where('password', '=', $password)
             ->get();
@@ -34,7 +34,7 @@ class PostController extends Controller
 
     public function listuser()
     {
-        $users = DB::table('users')->get();
+        $users = DB::table('accounts')->get();
 
         return view('listuser', ['users' => $users]);
     }
@@ -46,7 +46,7 @@ class PostController extends Controller
         print_r($request->session()->get('password'));
         $username = $request->session()->get('username');
         $password = $request->session()->get('password');
-        $users = DB::table('users')
+        $users = DB::table('accounts')
             ->where('username', '=', $username)
             ->where('password', '=', $password)
             ->first();
@@ -59,7 +59,7 @@ class PostController extends Controller
         $password = $request->input('password0124');
         $admin = $request->input('admin0124') ? $request->input('admin0124') : 0;
         
-        DB::insert('insert into users (username, password, admin) values (?, ?, ?)', [$username, $password, $admin]);
+        DB::insert('insert into accounts (username, password, admin) values (?, ?, ?)', [$username, $password, $admin]);
         return redirect('list');
     }
 }
