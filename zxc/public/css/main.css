@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+}
+
+.post_list {
+  border-radius: 25px;
+  width: 636px;
+  height: 414px;
+  /*background: rgba(10,10,10,1);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;*/
+  opacity: 1;
+  position: absolute;
+  top: 188px;
+  left: 50px;
+  overflow: hidden;
+}
+
+.post_image {
+  border-radius: 25px 0px 0px 25px;
+  width: 414px;
+  height: 414px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  background: rgba(250, 250, 255, 1);
+  opacity: 1;
+}
+
+.read_more {
+  visibility: hidden;
+  background-color: white;
+  color: #3498DB;
+  width: 200px;
+  height: 50px;
+  bottom: 10px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 44px;
+  font-size: 25px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 25px;
+  text-transform: uppercase;
+  border: 2px solid #3498DB;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: visibility 200ms linear;
+  transition: opacity 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.read_more:hover {
+  transition: background-color 200ms linear;
+  background-color: #3498DB;
+  color: white;
+}
+
+.post_detail:hover .read_more {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.2s ease-in;
+
+}
+
+.post_detail {
+  width: 222px;
+  height: 414px;
+  background: rgba(250, 250, 255, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 414px;
+  overflow: hidden;
+}
+
+.post_title {
+  width: 200px;
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.v6_21 {
+  width: 100%;
+  height: 1080px;
+  background: rgba(255, 255, 255, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.snorlax_bg {
+  /*width: 100%;*/
+  background: url("../images/snorlax.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*opacity: 1;
+  position: relative;*/
+  overflow: visible;
+}
+
+.v6_6 {
+  width: 100%;
+  height: 900px;
+  background: rgba(0, 0, 0, 1);
+  opacity: 1;
+  position: absolute;
+  top: 90px;
+  left: 240px;
+  overflow: hidden;
+}
+
+.v6_10 {
+  width: 100%;
+  height: 900px;
+  background: rgba(196, 196, 196, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.v6_16 {
+  width: 100%;
+  height: 50px;
+  background: url("../images/v6_16.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.v6_12 {
+  width: 100%;
+  height: 50px;
+  background: rgba(196, 196, 196, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.v6_14 {
+  width: 70px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v6_15 {
+  width: 65px;
+  height: 12px;
+  background: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  position: absolute;
+  top: 25px;
+  left: 150px;
+}
+
+.fb {
+  /*background:url(../images/fb.PNG);
+  background-size: cover;*/
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  position: relative;
+  display: inline-block;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  /*background: rgba(150,150,150,1);*/
+  opacity: 1;
+  color: rgba(255, 255, 255, 1);
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+.toptext {
+  left: 10px;
+  color: rgba(255, 255, 255, 1);
+  vertical-align: middle;
+  line-height: 50px;
+  position: relative;
+  display: inline-block;
+}
