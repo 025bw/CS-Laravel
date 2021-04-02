@@ -21,4 +21,5 @@ Route::get('/', function () {
 
 Route::get('/home',[HomeController::class,'index']);
 
-Route::view('/test','test');
+Route::view('/welcome','welcome');
+Route::get('/test',[HomeController::class,'create']);
