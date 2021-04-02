@@ -19,7 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home',[HomeController::class,'index']);
-
 Route::view('/welcome','welcome');
-Route::get('/test',[HomeController::class,'create']);
+Route::get('/setage',[HomeController::class,'setage']);
+Route::get('/setname',[HomeController::class,'setname']);
+Route::get('/getage',[HomeController::class,'getage']) ->middleware('check_age');
+Route::get('/getname',[HomeController::class,'getname']) ->middleware('check_age');
+Route::get('/delete',[HomeController::class,'delete'])->middleware('check_age');
