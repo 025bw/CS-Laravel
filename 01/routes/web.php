@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +25,9 @@ Route::get('/setname',[HomeController::class,'setname']);
 Route::get('/getage',[HomeController::class,'getage']) ->middleware('check_age');
 Route::get('/getname',[HomeController::class,'getname']) ->middleware('check_age');
 Route::get('/delete',[HomeController::class,'delete'])->middleware('check_age');
+Route::view('/test','test');
+Route::get('/login', function () {
+    return view('login');
+});
+Route::post('/login',[PostController::class,'login']);
 Route::view('/test','test');
