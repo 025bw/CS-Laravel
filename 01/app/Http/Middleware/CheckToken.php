@@ -17,7 +17,8 @@ class CheckToken
      * @return mixed
      */
     public function handle(Request $request, Closure $next)
-    {Log::info('before');
+    {
+        Log::info('before');
         $response = $next($request);
         return $next($request);
         Log::info('after');

@@ -55,6 +55,16 @@ class HomeController extends Controller
     public function delete(Request $request)
     {
         $request->session()->flush();
-        return redirect('/test');
+        return redirect('/login');
     }
+    public function login(Request $request)
+    {
+        $request->session()->flush();
+        $username=$request->input('username0123');
+        $request->session()->put('username', $username);
+        $password=$request->input('password0123');
+        $request->session()->put('password', $password);
+    }
+
+    
 }

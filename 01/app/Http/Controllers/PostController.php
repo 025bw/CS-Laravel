@@ -2,17 +2,56 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
 class PostController extends Controller
 {
     //
     public function login(Request $request)
     {
-        //$request->session()->flush();
-        $username=$request->input('username0123');
-        $request->session()->put('username', $username);
-        $password=$request->input('password0123');
-        $request->session()->put('password', $password);
+        $username = $request->input('username0123');
+        $password = $request->input('password0123');
+        $users = DB::table('users')
+        ->where('username', '=', $username)
+        ->where('password', '=', $password)
+        ->get();
+        if(count($users)>0)
+        {
+            $request->session()->put('username', $username);
+            return redirect('/home');
+        }
+        else
+        $request->session()->flush();
+        return redirect('/login');
+    }
+
+    public function logout(Request $request)
+    {
+        $request->session()->flush();
+        return redirect('/home');
+    }
+
+    public function listuser()
+    {
+        $users = DB::table('users')->get();
+
+        return view('listuser', ['users' => $users]);
+    }
+
+
+    public function listcurrentuser(Request $request)
+    {
+        print_r($request->session()->get('username'));
+        print_r($request->session()->get('password'));
+        $username = $request->session()->get('username');
+        $password = $request->session()->get('password');
+        $users = DB::table('users')
+            ->where('username', '=', $username)
+            ->where('password', '=', $password)
+            ->first();
+        return view('listcurrentuser', ['users' => $users]);
     }
 }

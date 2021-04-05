@@ -10,6 +10,10 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body>
+
+
+<a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+
 <div class="container">
 	<div class="row">
 	    
@@ -18,7 +22,9 @@
     		<h1>Create post</h1>
     		
     		<form action="" method="POST">
-    		    
+
+    		    @csrf
+				
     		    <div class="form-group has-error">
     		        <label for="slug">Slug <span class="require">*</span> <small>(This field use in url path.)</small></label>
     		        <input type="text" class="form-control" name="slug" />

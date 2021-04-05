@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use Illuminate\Support\Facades\DB;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,14 +22,18 @@ Route::get('/', function () {
 });
 
 Route::view('/welcome','welcome');
-Route::get('/setage',[HomeController::class,'setage']);
+/* Route::get('/setage',[HomeController::class,'setage']);
 Route::get('/setname',[HomeController::class,'setname']);
-Route::get('/getage',[HomeController::class,'getage']) ->middleware('check_age');
-Route::get('/getname',[HomeController::class,'getname']) ->middleware('check_age');
-Route::get('/delete',[HomeController::class,'delete'])->middleware('check_age');
+Route::get('/getage',[HomeController::class,'getage']);
+Route::get('/getname',[HomeController::class,'getname']);*/
+Route::get('/delete',[HomeController::class,'delete']);
 Route::view('/test','test');
+Route::view('/home','home');
 Route::get('/login', function () {
     return view('login');
 });
 Route::post('/login',[PostController::class,'login']);
-Route::view('/test','test');
+Route::get('/logout',[PostController::class,'logout']);
+Route::view('/post','post')->middleware('check_cre','check_admin');
+Route::get('/list',[PostController::class,'listuser']);
+Route::get('/list2',[PostController::class,'listcurrentuser']);
