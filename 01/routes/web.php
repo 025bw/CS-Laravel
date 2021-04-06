@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\DB;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::view('/welcome','welcome');
@@ -37,3 +37,7 @@ Route::get('/logout',[PostController::class,'logout']);
 Route::view('/post','post')->middleware('check_cre','check_admin');
 Route::get('/list',[PostController::class,'listuser']);
 Route::get('/list2',[PostController::class,'listcurrentuser']);
+Route::get('/adduser', function () {
+    return view('adduser');
+});
+Route::post('/adduser',[PostController::class,'adduser']);
