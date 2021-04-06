@@ -57,7 +57,7 @@ class PostController extends Controller
     {
         $username = $request->input('username0124');
         $password = $request->input('password0124');
-        $admin = $request->input('admin01234');
+        $admin = $request->input('admin0124')->nullable();
         DB::insert('insert into users (username, password, admin) values (?, ?, ?)', [$username, $password, $admin]);
         return view('listuser');
     }
