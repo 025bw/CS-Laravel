@@ -10,11 +10,5 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-    public function index()
-    {
-        $users = Accounts::table('users')->get();
-
-        return view('user.index', ['users' => $users]);
-    }
+    
 }

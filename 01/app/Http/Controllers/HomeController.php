@@ -6,21 +6,10 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    //
+    
     public function index(Request $request)
     {
-        /* $title = '1 2 3 5';
-        return view('home', [
-            'title'=>$title
-        ]);*/
         
-        /*dd($request->input('name'));*/
-        /*return response('xzc',200)->cookie('name','value',120);*/
-        /*return redirect()->away('https://www.google.com');*/
-        $name = $request->session()->get('age');
-        dd($name);
-        /*return redirect('/welcome')->with('status','Create Success?');*/
-        # code...
     }
 
     public function setname(Request $request)
