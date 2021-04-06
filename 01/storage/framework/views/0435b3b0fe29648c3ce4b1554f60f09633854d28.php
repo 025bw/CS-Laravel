@@ -2,7 +2,7 @@
     <html>
 
     <head>
-        <title>View Student Records</title>
+        <title>List user</title>
     </head>
 
     <body>
