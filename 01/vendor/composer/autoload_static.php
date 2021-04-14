@@ -175,6 +175,7 @@ class ComposerStaticInit9d54290b610d260bdd81976df2f4ed85
         'A' => 
         array (
             'Asm89\\Stack\\' => 12,
+            'Appstract\\BladeDirectives\\' => 26,
             'App\\' => 4,
         ),
     );
@@ -491,6 +492,10 @@ class ComposerStaticInit9d54290b610d260bdd81976df2f4ed85
         array (
             0 => __DIR__ . '/..' . '/asm89/stack-cors/src',
         ),
+        'Appstract\\BladeDirectives\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/appstract/laravel-blade-directives/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -511,8 +516,7 @@ class ComposerStaticInit9d54290b610d260bdd81976df2f4ed85
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
-        'App\\Http\\Controllers\\PostController' => __DIR__ . '/../..' . '/app/Http/Controllers/PostController.php',
+        'App\\Http\\Controllers\\PostsController' => __DIR__ . '/../..' . '/app/Http/Controllers/PostsController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckAdmin' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckAdmin.php',
@@ -534,6 +538,8 @@ class ComposerStaticInit9d54290b610d260bdd81976df2f4ed85
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'Appstract\\BladeDirectives\\BladeDirectivesServiceProvider' => __DIR__ . '/..' . '/appstract/laravel-blade-directives/src/BladeDirectivesServiceProvider.php',
+        'Appstract\\BladeDirectives\\Parser' => __DIR__ . '/..' . '/appstract/laravel-blade-directives/src/Parser.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',

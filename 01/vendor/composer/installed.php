@@ -11,6 +11,15 @@
   ),
   'versions' => 
   array (
+    'appstract/laravel-blade-directives' => 
+    array (
+      'pretty_version' => '1.11.0',
+      'version' => '1.11.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8c269cf469ce356b9d69d1a90a763babbf67a3a7',
+    ),
     'asm89/stack-cors' => 
     array (
       'pretty_version' => 'v2.0.3',

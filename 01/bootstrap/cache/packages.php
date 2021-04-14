@@ -1,4 +1,11 @@
 <?php return array (
+  'appstract/laravel-blade-directives' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Appstract\\BladeDirectives\\BladeDirectivesServiceProvider',
+    ),
+  ),
   'facade/ignition' => 
   array (
     'providers' => 

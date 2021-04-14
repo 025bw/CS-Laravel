@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A layout example that shows off a responsive photo gallery.">
     <title>Photo Gallery &ndash; Layout Examples &ndash; Pure</title>
-    <link rel="stylesheet" href="/css/pure-min.css">
-    <link rel="stylesheet" href="/css/grids-responsive-min.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="{{URL::asset('/css/pure-min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('/css/grids-responsive-min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('/css/styles.css')}}">
 </head>
 <body>
 
