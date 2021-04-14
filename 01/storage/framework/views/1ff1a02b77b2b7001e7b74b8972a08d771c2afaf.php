@@ -20,16 +20,13 @@
 
 <body>
 
-  <h1>Hôm</h1>
+<?php $__env->startSection('sidebar'); ?>
+    This is the master sidebar.
+<?php echo $__env->yieldSection(); ?>
+<div class="container">
+<?php echo $__env->yieldContent('content'); ?>
 
-  <?php if(Session::has('username')): ?>
-  <a href="<?php echo e(url('/logout')); ?>" class="text-sm text-gray-700 underline">Log out</a><br>
-  <a href="<?php echo e(url('/post')); ?>" class="text-sm text-gray-700 underline">Post</a>
-  <?php else: ?>
-  <a href="<?php echo e(url('/login')); ?>" class="text-sm text-gray-700 underline">Log in</a><br>
-  <?php endif; ?>
-
+</div>
 </body>
 
-
-</html><?php /**PATH C:\Users\z\Documents\GitHub\CS-Laravel\01\resources\views/home.blade.php ENDPATH**/ ?>
+</html><?php /**PATH C:\Users\z\Documents\GitHub\CS-Laravel\01\resources\views/app.blade.php ENDPATH**/ ?>

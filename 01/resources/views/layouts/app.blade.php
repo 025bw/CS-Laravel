@@ -7,7 +7,7 @@
 
 
 <head>
-  <title>z</title>
+  <title>@yield('title','z')</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -20,16 +20,12 @@
 
 <body>
 
-  <h1>Hôm</h1>
-
-  <?php if(Session::has('username')): ?>
-  <a href="<?php echo e(url('/logout')); ?>" class="text-sm text-gray-700 underline">Log out</a><br>
-  <a href="<?php echo e(url('/post')); ?>" class="text-sm text-gray-700 underline">Post</a>
-  <?php else: ?>
-  <a href="<?php echo e(url('/login')); ?>" class="text-sm text-gray-700 underline">Log in</a><br>
-  <?php endif; ?>
-
+@section('sidebar')
+    This is the master sidebar.
+@show
+<div class="container">
+@yield('content')
+</div>
 </body>
 
-
-</html><?php /**PATH C:\Users\z\Documents\GitHub\CS-Laravel\01\resources\views/home.blade.php ENDPATH**/ ?>
+</html>

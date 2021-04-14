@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Account;
+
+
 
 class PostController extends Controller
 {
@@ -58,8 +61,32 @@ class PostController extends Controller
         $username = $request->input('username0124');
         $password = $request->input('password0124');
         $admin = $request->input('admin0124') ? $request->input('admin0124') : 0;
-        
-        DB::insert('insert into accounts (username, password, admin) values (?, ?, ?)', [$username, $password, $admin]);
+        $account = new Account();
+        $account -> username = $username;
+        $account -> password = $password;
+        $account -> admin = $admin;
+        $account -> save();
+        // DB::insert('insert into accounts (username, password, admin) values (?, ?, ?)', [$username, $password, $admin]);
         return redirect('list');
+    }
+
+
+        public function update(Request $request)
+    {
+        $username = $request->input('username0124');
+        $password = $request->input('password0124');
+        $admin = $request->input('admin0124') ? $request->input('admin0124') : 0;
+        $account = new Account();
+        $account -> username = $username;
+        $account -> password = $password;
+        $account -> admin = $admin;
+        $account -> save();
+        // DB::insert('insert into accounts (username, password, admin) values (?, ?, ?)', [$username, $password, $admin]);
+        return redirect('list');
+    }
+
+    public function get_name($id) {
+        dd($id );
+        $name = Account::query()->where('id', $id)->first();
     }
 }

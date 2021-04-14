@@ -15,8 +15,7 @@
 	<h1>Log in</h1>
 
 	<form action="" method="POST">
-
-<input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+	<?php echo csrf_field(); ?>
 		<div class="div1" >username: </div><input type="text" id="username0123" name="username0123"><br>
 		<div class="div1" >password: </div><input type="password" id="password0123" name="password0123">
 		<br>

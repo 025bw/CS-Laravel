@@ -12,16 +12,16 @@
 
 <body>
 
-	<h1>Log in</h1>
+	<h1>Add user</h1>
 
 	<form action="" method="POST">
 
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-		<div class="div1" >username: </div><input type="text" id="username0123" name="username0123"><br>
-		<div class="div1" >password: </div><input type="password" id="password0123" name="password0123">
-		<br>
+		<div class="div1" >username: </div><input type="text" id="username0124" name="username0124"><br>
+		<div class="div1" >password: </div><input type="password" id="password0124" name="password0124"><br>
+		<div class="div1" >admin: </div><input type="checkbox" id="admin0124" value="1" name="admin0124"><br>
 		<button style="margin-left:100px">
-		Sign in
+		Add
 		</button>
 	</form>
 
