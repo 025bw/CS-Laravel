@@ -78,14 +78,14 @@ Route::get('/', function () {
 
 Route::get('/delete', [PostsController::class, 'delete']);
 
-Route::get('/nav', function () {
-    return view('x/nav');
-});
+// Route::get('/nav', function () {
+//     return view('x/nav');
+// });
 
 Route::get('/update', [PostsController::class, 'updateView']);
 
 Route::post('/update', [PostsController::class, 'update']);
 
-Route::get('/post', function () {
-    return view('x/post');
-});
+// Route::get('/post', function () {
+//     return view('x/post');
+// });
