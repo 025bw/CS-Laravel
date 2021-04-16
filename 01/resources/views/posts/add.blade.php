@@ -48,7 +48,7 @@
 
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">
-                            Update
+                            Submit
                         </button>
                         <!-- <button class="btn btn-secondary">
                             Cancel

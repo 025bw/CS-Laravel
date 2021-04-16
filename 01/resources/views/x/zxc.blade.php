@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -34,43 +35,24 @@
 </head>
 
 <body>
-    <h1>Update user</h1>
-
-    User ID:<select name="id" id="id"  >
+    <select name="id" action="post" id="id">
         <option value="-1"></option>
         @foreach ($accounts as $account)
             <option value="{{ $account->id }}" data-user={{ $account->id }}>{{ $account->id }}</option>
         @endforeach
     </select>
-    <br>
-
-    @foreach ($accounts as $account)
-
-        <form style="display: none;" action="" method="POST" id="form{{ $account->id }}">
-            {{ $account->id }}
-        </form>
-    @endforeach
-    <p id="demo"></p>
-	<div>&pound;<span id='DisplayValueSomewhereID'>0.00</span></div>
-
+    <p><span id="selectedValue"></span></p>
 </body>
 
 </html>
-$(document).on('change', '#id', function(){
-    $('#DisplayValueSomewhereID').html($('#mySelect').val());
-});
-{{-- <script type="text/javascript">
-	$(document).ready(function(e) {
-		$("[name='id']").on('change', function() {
-			let id = $('#id').val();
-			var url = "/";
-			$.ajax({
-				type: "GET",
-				url: url,
-				success: function(data) {
-					location.reload();
-				}
-			});
-		});
-}); --}}
-{{-- </script> --}}
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        $("[name='id']").on('change', function() {
+            let id = $('#id').val();
+            console.log(id);
+            var htmlString = "<?php echo $id; ?>";
+            document.getElementById("selectedValue").innerHTML = htmlString;
+        });
+    });
+
+</script>

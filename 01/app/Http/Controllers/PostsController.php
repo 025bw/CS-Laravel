@@ -51,4 +51,12 @@ class PostsController extends Controller
         $post = DB::table('posts')->where('id', $request->input('id'))->first();
         return view('posts/update', ['post' => $post]);
     }
+
+    public function list(Request $request)
+    {
+        
+        return view('posts/list', [
+            'posts' => DB::table('posts')->paginate(1)
+        ]);
+    }
 }

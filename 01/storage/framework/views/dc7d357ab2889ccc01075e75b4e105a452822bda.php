@@ -36,41 +36,26 @@
 <body>
     <h1>Update user</h1>
 
-    User ID:<select name="id" id="id"  >
+    User ID:<select name="id" id="id" onchange="myFunction()"> >
         <option value="-1"></option>
-        @foreach ($accounts as $account)
-            <option value="{{ $account->id }}" data-user={{ $account->id }}>{{ $account->id }}</option>
-        @endforeach
+        <?php $__currentLoopData = $accounts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $account): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <option value="<?php echo e($account->id); ?>" data-user=<?php echo e($account->id); ?>><?php echo e($account->id); ?></option>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </select>
     <br>
 
-    @foreach ($accounts as $account)
+    <?php $__currentLoopData = $accounts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $account): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-        <form style="display: none;" action="" method="POST" id="form{{ $account->id }}">
-            {{ $account->id }}
+        <form style="display: none;" action="" method="POST" id="form<?php echo e($account->id); ?>">
+            <?php echo e($account->id); ?>
+
         </form>
-    @endforeach
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     <p id="demo"></p>
-	<div>&pound;<span id='DisplayValueSomewhereID'>0.00</span></div>
-
 </body>
 
 </html>
-$(document).on('change', '#id', function(){
-    $('#DisplayValueSomewhereID').html($('#mySelect').val());
-});
-{{-- <script type="text/javascript">
-	$(document).ready(function(e) {
-		$("[name='id']").on('change', function() {
-			let id = $('#id').val();
-			var url = "/";
-			$.ajax({
-				type: "GET",
-				url: url,
-				success: function(data) {
-					location.reload();
-				}
-			});
-		});
-}); --}}
-{{-- </script> --}}
+
+
+
+<?php /**PATH C:\Users\z\Documents\GitHub\CS-Laravel\01\resources\views/x/update.blade.php ENDPATH**/ ?>

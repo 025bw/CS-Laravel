@@ -37,11 +37,15 @@ Route::get('/getname',[HomeController::class,'getname']);*/
 // return view('login');
 // });
 
-// Route::get('/update', function () {
-//     $accounts = Account::all();
-//     return view('update',compact('accounts'));
-// });
+Route::get('/update2', function () {
+    $accounts = Account::all();
+    return view('x/update',compact('accounts'));
+});
 
+Route::get('/update3', function () {
+    $accounts = Account::all();
+    return view('x/zxc',compact('accounts'));
+});
 
 // Route::get('/getNameByUser/{id}',[PostController::class,'get_name']);
 
@@ -71,10 +75,7 @@ Route::get('/add', function () {
 
 Route::post('/add', [PostsController::class, 'add']);
 
-Route::get('/', function () {
-    $posts = Post::all();
-    return view('posts/list', compact('posts'));
-});
+Route::get('/', [PostsController::class, 'list']);
 
 Route::get('/delete', [PostsController::class, 'delete']);
 
