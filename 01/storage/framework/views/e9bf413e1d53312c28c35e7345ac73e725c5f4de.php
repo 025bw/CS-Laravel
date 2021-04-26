@@ -50,8 +50,7 @@
         $("[name='id']").on('change', function() {
             let id = $('#id').val();
             console.log(id);
-            var htmlString = "<?php echo $id; ?>";
-            document.getElementById("selectedValue").innerHTML = htmlString;
+            document.getElementById("selectedValue").innerHTML ="<?php if("+id+"==1): ?> id <?php endif; ?>";
         });
     });
 

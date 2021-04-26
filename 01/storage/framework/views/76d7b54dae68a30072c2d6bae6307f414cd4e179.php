@@ -28,7 +28,7 @@
 
                     <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
 
-                    
+
 
 
                     <div class="form-group">
@@ -46,9 +46,18 @@
                         <input type="text" class="form-control" name="author">
                     </div>
 
+                    <div class="custom-file">
+                        
+
+                        <label for="image">
+                            <input type="file" name="image" id="image"s />
+                            <img id="img" width="100" src="" />
+                        </label>
+                    </div>
+
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">
-                            Update
+                            Submit
                         </button>
                         <!-- <button class="btn btn-secondary">
                             Cancel
@@ -61,5 +70,24 @@
         </div>
     </div>
 </body>
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-</html><?php /**PATH C:\Users\z\Documents\GitHub\CS-Laravel\01\resources\views/posts/add.blade.php ENDPATH**/ ?>
+            reader.onload = function(e) {
+                $('#img').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#image").change(function() {
+        readURL(this);
+    });
+
+</script>
+
+</html>
+<?php /**PATH C:\Users\z\Documents\GitHub\CS-Laravel\01\resources\views/posts/add.blade.php ENDPATH**/ ?>

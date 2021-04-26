@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+
+class XUser extends Model
+{
+    use HasFactory;
+    public function phone(){
+        return $this->hasOne('Phone');
+    }
+}
