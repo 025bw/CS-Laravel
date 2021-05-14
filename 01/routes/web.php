@@ -7,6 +7,7 @@ use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\DB;
 use App\Models\Account;
 use App\Models\Post;
+use
 
 /*
 |--------------------------------------------------------------------------
@@ -39,12 +40,12 @@ Route::get('/getname',[HomeController::class,'getname']);*/
 
 Route::get('/update2', function () {
     $accounts = Account::all();
-    return view('x/update',compact('accounts'));
+    return view('x/update', compact('accounts'));
 });
 
 Route::get('/update3', function () {
     $accounts = Account::all();
-    return view('x/zxc',compact('accounts'));
+    return view('x/zxc', compact('accounts'));
 });
 
 // Route::get('/getNameByUser/{id}',[PostController::class,'get_name']);
@@ -79,9 +80,9 @@ Route::get('/', [PostsController::class, 'list']);
 
 Route::get('/delete', [PostsController::class, 'delete']);
 
-// Route::get('/nav', function () {
-//     return view('x/nav');
-// });
+Route::get('/nav', function () {
+    return view('x/nav');
+});
 
 Route::get('/update', [PostsController::class, 'updateView']);
 
@@ -90,3 +91,20 @@ Route::post('/update', [PostsController::class, 'update']);
 // Route::get('/post', function () {
 //     return view('x/post');
 // });
+
+Route::get('/login', [\App\Http\Controllers\CredentialController::class, 'login']);
+Route::get('/signup', function () {
+    return view('auth.signup');
+});
+Route::post('/signup', [\App\Http\Controllers\CredentialController::class, 'SignUp']);
+Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login']);
+Route::get('/show', [\App\Http\Controllers\CredentialController::class, 'show']);
+Route::get('/logout', [\App\Http\Controllers\CredentialController::class, 'logout']);
+Route::get('/check', [\App\Http\Controllers\CredentialController::class, 'check']);
+Route::get('verified-email', function ()){
+$data = new stdClass();
+$data->name = 'Donald Trump';
+
+Mail::to('raichu01@icloud.com')->send(new VerifiedEmail($data));
+
+}

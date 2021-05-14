@@ -6,6 +6,17 @@
       0 => 'Appstract\\BladeDirectives\\BladeDirectivesServiceProvider',
     ),
   ),
+  'barryvdh/laravel-debugbar' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Barryvdh\\Debugbar\\ServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Debugbar' => 'Barryvdh\\Debugbar\\Facade',
+    ),
+  ),
   'facade/ignition' => 
   array (
     'providers' => 
