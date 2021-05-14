@@ -101,11 +101,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
 
-        $(function() {
-            $('.bkgd').click(function() {
+        $(function () {
+            $('.bkgd').click(function () {
                 var d = new Date().getSeconds();
-                var url = "https://picsum.photos/900/600?"+d;
-                $(this).css("background-image", "url(" + url +  ")");
+                var url = "https://picsum.photos/900/600?" + d;
+                $(this).css("background-image", "url(" + url + ")");
             });
         });
 

@@ -34,7 +34,7 @@
             position: absolute;
             bottom: 0px;
             transition: 0.5s;
-            padding-bottom: 60%;
+            /* padding-bottom: 60%; */
             background-size: cover;
         }
 
@@ -82,16 +82,19 @@
         }
 
         #divBackground {
-            background-image: url(https://picsum.photos/900/600?);
+           
+            /* background-image: url(https://picsum.photos/900/600?); */
             position: absolute;
         }
 
         img#imgBackground {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            /* z-index: -1; */
+           max-width: 100%;
+           max-height: 100%;
+           
         }
 
     </style>
@@ -116,17 +119,9 @@
 <body>
 
 
-<div id="divBackground">
-    <img id="imgBackground"
-                 src="https://picsum.photos/900/600?"
-    >
-    <div>
-        <button onclick="reloadBackgroundz()">Try it</button>
-    </div>
-</div>
 
 
-<button onclick="reloadBackgroundz()">Try it</button>
+
 
 
 <div class="header">
@@ -169,8 +164,7 @@
 
 
         >
-            <div class="bkgd-img">
-            </div>
+        
 
             <div class="txt">
                 <div class="txt_title">
@@ -190,11 +184,10 @@
     </div>
 
     <div class="photo-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-3" style="height: 60%">
-        <div class="bkgd refresh" style="background-image: url('https://picsum.photos/900/600');">
-
-            <div id="0101" class="txt">
-
-
+        <div class="bkgd refresh"  id="0101" style="background-image: url('https://picsum.photos/900/600');">
+            
+            <div class="txt">
+                
                 <div class="txt_title">
                     <a style="right: 2px; font-size: 150%"
                        href="https://www.corsair.com/us/en/Categories/Products/Gaming-Keyboards/RGB-Mechanical-Gaming-Keyboards/K65-RGB-MINI-60%25-Mechanical-Gaming-Keyboard/p/CH-9194014-NA">
@@ -215,7 +208,7 @@
     $(function () {
         $('.refresh').click(function () {
             var url = "https://picsum.photos/900/600?" + new Date().getSeconds();
-img =
+
             document.getElementById('0101').style.backgroundImage = "url(" + url + ")";
 
             //$(this).css("background-image", "url(" + url +  ")");
@@ -232,17 +225,17 @@ img =
     // function myFunction() {
     //     setInterval(document.getElementById('0101').onLoad.reloadbackground(), 1000);
     // }
-    function reloadBackground1() {
-        url = "https://picsum.photos/900/600?" + new Date().getTime();
-        img = document.getElementById("0101")
-        img.style.backgroundImage = "url(" + url + ")";
-    }
-    function reloadBackground2() {
-        url = "https://picsum.photos/900/600?" + new Date().getTime();
-        img = document.getElementById("imgBackground")
-        img.src = url;
-    }
-    window.setInterval(reloadBackground1, 5000);
+    // function reloadBackground1() {
+    //     url = "https://picsum.photos/900/600?" + new Date().getTime();
+    //     img = document.getElementById("0101");
+    //     img.style.backgroundImage = "url(" + url + ")";
+    // }
+    // function reloadBackground2() {
+    //     url = "https://picsum.photos/900/600?" + new Date().getTime();
+    //     img = document.getElementById("imgBackground")
+    //     img.src = url;
+    // }
+    // window.setInterval(reloadBackground2, 5000);
 
 
 </script>

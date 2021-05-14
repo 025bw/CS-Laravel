@@ -21,8 +21,8 @@ Route::get('/', function () {
     return view('/test/test');
 });
 
-Route::get('/nlcl',function (){
-   return view('/test/test');
+Route::get('/signup',function (){
+   return view('/signup');
 });
 
 Route::get('/header',function (){
